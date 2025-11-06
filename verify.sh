@@ -29,6 +29,8 @@ if [ -n "${original_nvm_default}" ] && [ "${original_nvm_default}" != "none" ]; 
     nvm alias default "${original_nvm_default}" >/dev/null
 fi
 
+nvm alias default "${version}"
+
 echo "- Bun:"
 bun --version
 
