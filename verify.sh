@@ -17,6 +17,7 @@ fi
 export NVM_NO_COLORS=1
 original_nvm_default="$(nvm alias --no-colors default 2>/dev/null | head -n 1 | awk '{print $3}')"
 for version in "18" "20" "22"; do
+    nvm alias default "${version}" >/dev/null 2>&1 || true
     nvm use "${version}"
     node --version
     npm --version
