@@ -18,6 +18,8 @@ for version in "18" "20" "22"; do
     npm ls -g
 done
 
+nvm alias default "${version}"
+
 echo "- Bun:"
 bun --version
 
